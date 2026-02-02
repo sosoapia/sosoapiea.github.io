@@ -1,0 +1,21 @@
+<model-viewer src="for model viewer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-467.1deg 70.14deg 0.8386m" field-of-view="30deg" auto-rotate>
+    <button class="Hotspot" slot="hotspot-1" data-position="0.11767294385769561m 0.02400379038368089m -0.13964435279535192m" data-normal="0m -2.2204460492503118e-16m 1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Battery Access
+        </div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.17111296046103994m 0.019278121901397452m -0.1764521370852085m" data-normal="0.032603241072858724m 0.016991177931787504m -0.9993239357405763m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Buckle</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="0.28901194032279603m 0.17911790435661384m -0.16209133249501664m" data-normal="0.9987719508389222m -0.03835990873517325m -0.03135454702659419m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Strap</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="0.11206288287522287m 0.1377059052251764m -0.17050000000000004m" data-normal="0m 2.2204460492503136e-16m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Casing </div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

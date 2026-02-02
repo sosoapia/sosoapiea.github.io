@@ -5,128 +5,46 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-:not(:defined) > * {
-  display: none;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-model-viewer {
-  width: 100%;
-  height: 90%;
-  background-color: #ffffff;
-}
-
-.Hotspot {
-  background: #fff;
-  border-radius: 32px;
-  border: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 24px;
-  padding: 8px;
-  position: relative;
-  transition: opacity 0.3s;
-  width: 24px;
-}
-
-.Hotspot:not([data-visible]) {
-  background: transparent;
-  border: 4px solid #fff;
-  box-shadow: none;
-  height: 32px;
-  pointer-events: none;
-  width: 32px;
-}
-
-.Hotspot:focus {
-  border: 4px solid rgb(0, 128, 200);
-  height: 32px;
-  outline: none;
-  width: 32px;
-}
-
-.Hotspot > * {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
-.HotspotAnnotation{
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.8);
-  display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  left: calc(100% + 1em);
-  max-width: 128px;
-  overflow-wrap: break-word;
-  padding: 0.5em 1em;
-  position: absolute;
-  top: 50%;
-  width: max-content;
-}
-
-.Hotspot:not([data-visible]) > * {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(calc(-50% + 4px));
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-</style>
- 
-    <script src="focus-visible.js" defer></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- insert your "model-viewer" snippet code in the next line //-->
-<model-viewer src="iphone.glb" ios-src="iphone.usdz" ar ar-modes="webxr'' scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.png" shadow-intensity="1" width="400px" height="300px">
-    <button class="Hotspot" slot="hotspot-2" data-position="-0.0006420006309058976m 0.001803760051727281m 0.06211766597165401m" data-normal="0m 1m 2.220446049250313e-16m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Charging Port</div>
-    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.02970781352307955m 0.0039066485751154m -0.04189403121327008m" data-normal="-0.9808896797008884m 0.19456473538719413m 4.320204980139278e-17m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Mute Switch</div>
-    </button><button class="Hotspot" slot="hotspot-5" data-position="-0.030009792327880865m 0.0041727873752299225m -0.02974559358763959m" data-normal="-1m 0m 0m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Volume Up Button</div>
-    </button><button class="Hotspot" slot="hotspot-6" data-position="-0.030009792327880865m 0.002620827207885047m -0.02038687582416067m" data-normal="-1m 0m 0m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Volume Down Button</div>
-    </button><button class="Hotspot" slot="hotspot-7" data-position="0.001318151424893479m 0.005573525309562672m 0.051742253294212545m" data-normal="0m 1m 2.220446049250313e-16m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Home Button</div>
-    </button><button class="Hotspot" slot="hotspot-8" data-position="0.01501395163610706m 0.0038954496166223m -0.06127489089965822m" data-normal="0m 2.220446049250313e-16m -1m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Power Button</div>
-    </button>
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    
-         <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
-      👋 Activate AR
-  </button>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="for model viewer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-467.1deg 70.14deg 0.8386m" field-of-view="30deg" auto-rotate id="gear">
+      <button class="Hotspot" slot="hotspot-1" data-position="0.11767294385769561m 0.02400379038368089m -0.13964435279535192m" data-normal="0m -2.2204460492503118e-16m 1m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Battery Access
+          </div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.17111296046103994m 0.019278121901397452m -0.1764521370852085m" data-normal="0.032603241072858724m 0.016991177931787504m -0.9993239357405763m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Buckle</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="0.28901194032279603m 0.17911790435661384m -0.16209133249501664m" data-normal="0.9987719508389222m -0.03835990873517325m -0.03135454702659419m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Strap</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="0.11206288287522287m 0.1377059052251764m -0.17050000000000004m" data-normal="0m 2.2204460492503136e-16m -1m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Casing </div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
 
-    <!--div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div -->
-</model-viewer>
+<div style="position:absolute;bottom:0px; right:0px">
+<button onClick="setOrbit('-325.8deg 84.75deg 0.8386m')">Front</button>
+<button onClick="setOrbit('-323.4deg 0.0000573deg 0.8386m')">Top</button>
+<button onClick="setOrbit('-322.7deg 179.3deg 0.8386m')">Bottom</button>
+
+    </model-viewer>  
+
+<script>
+function setOrbit(orbit)
+{document.getElementById('gear').cameraOrbit = orbit;}
+</script>
 
 
-
-
-
-
-
-    <!-- your "model-viewer" snippet code should appear above this line //-->
-    <script type="module" src="model-viewer.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
 </html>
-
-
-
-
