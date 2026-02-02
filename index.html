@@ -9,13 +9,14 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="for model viewer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-467.1deg 70.14deg 0.8386m" field-of-view="30deg" auto-rotate id="gear">
-      <button class="Hotspot" slot="hotspot-1" data-position="0.11767294385769561m 0.02400379038368089m -0.13964435279535192m" data-normal="0m -2.2204460492503118e-16m 1m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Battery Access
+    <model-viewer src="for model viewer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="-176.3deg 80.57deg 0.8386m" field-of-view="30deg" auto-rotate>
+      <button class="Hotspot" slot="hotspot-1" data-position="0.11767294385769561m 0.02400379038368089m -0.13964435279535192m" data-normal="0m -2.2204460492503118e-16m 1m" data-visibility-attribute="visible"onMouseOver="addhotspot1()" onMouseOut="removehotspot1()“>
+          <div class="HotspotAnnotation"id=hotspot1" style="visibility:hidden">Battery Access
           </div>
-      </button><button class="Hotspot" slot="hotspot-3" data-position="0.17111296046103994m 0.019278121901397452m -0.1764521370852085m" data-normal="0.032603241072858724m 0.016991177931787504m -0.9993239357405763m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Buckle</div>
-      </button><button class="Hotspot" slot="hotspot-4" data-position="0.28901194032279603m 0.17911790435661384m -0.16209133249501664m" data-normal="0.9987719508389222m -0.03835990873517325m -0.03135454702659419m" data-visibility-attribute="visible">
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.17111296046103994m 0.019278121901397452m -0.1764521370852085m" data-normal="0.032603241072858724m 0.016991177931787504m -0.9993239357405763m" data-visibility-attribute="visible"onMouseOver="addhotspot2()" onMouseOut="removehotspot2()">
+          <div class="HotspotAnnotation"id=hotspot2 style="visibility:hidden">Buckle</div>
+      </button>
+<button class="Hotspot" slot="hotspot-4" data-position="0.28901194032279603m 0.17911790435661384m -0.16209133249501664m" data-normal="0.9987719508389222m -0.03835990873517325m -0.03135454702659419m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Strap</div>
       </button><button class="Hotspot" slot="hotspot-5" data-position="0.11206288287522287m 0.1377059052251764m -0.17050000000000004m" data-normal="0m 2.2204460492503136e-16m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Casing </div>
@@ -29,19 +30,22 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-
-<div style="position:absolute;bottom:0px; right:0px">
-<button onClick="setOrbit('-325.8deg 84.75deg 0.8386m')">Front</button>
-<button onClick="setOrbit('-323.4deg 0.0000573deg 0.8386m')">Top</button>
-<button onClick="setOrbit('-322.7deg 179.3deg 0.8386m')">Bottom</button>
-
     </model-viewer>  
 
 <script>
-function setOrbit(orbit)
-{document.getElementById('gear').cameraOrbit = orbit;}
-</script>
+function addhotspot1(){
+document.getElementById("hotspot1").style.visibility="visible“
+}
+function removehotspot1(){
+document.getElementById("hotspot1").style.visibility="hidden";
+}function addhotspot2(){
+document.getElementById("hotspot2").style.visibility="visible“
+}
+function removehotspot2(){
+document.getElementById("hotspot2").style.visibility="hidden";
+}
 
+</script>
 
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
